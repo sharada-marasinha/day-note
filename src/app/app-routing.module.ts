@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashComponent } from './page/dash/dash.component';
 import { LoginComponent } from './page/login/login.component';
+import { AddDayNoteComponent } from './page/add-day-note/add-day-note.component';
+import { ViewAllComponent } from './page/view-all/view-all.component';
 
 const routes: Routes = [
   {
@@ -11,6 +13,14 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'add-note',
+    component:AddDayNoteComponent
+  },
+  {
+    path:'view-all',
+    component:ViewAllComponent
   }
 
 ];

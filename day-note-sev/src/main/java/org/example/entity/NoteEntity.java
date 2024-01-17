@@ -1,17 +1,25 @@
-package org.example.model;
+package org.example.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Note {
+@Entity
+public class NoteEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     Date date;
-    String iCet;
+    String i_cet;
     String home;
     String work;
     String task;

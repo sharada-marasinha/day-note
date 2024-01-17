@@ -8,6 +8,12 @@ import { NavComponent } from './comp/nav/nav.component';
 import { LoginComponent } from './page/login/login.component';
 import { AddDayNoteComponent } from './page/add-day-note/add-day-note.component';
 import { ViewAllComponent } from './page/view-all/view-all.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Import Angular Material modules
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,10 +23,12 @@ import { ViewAllComponent } from './page/view-all/view-all.component';
     LoginComponent,
     AddDayNoteComponent,
     ViewAllComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

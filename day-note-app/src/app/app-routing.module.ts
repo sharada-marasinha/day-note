@@ -4,6 +4,7 @@ import { DashComponent } from './page/dash/dash.component';
 import { LoginComponent } from './page/login/login.component';
 import { AddDayNoteComponent } from './page/add-day-note/add-day-note.component';
 import { ViewAllComponent } from './page/view-all/view-all.component';
+import { RegisterComponent } from './page/register/register.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'view-all',
     component:ViewAllComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
   }
 
 ];

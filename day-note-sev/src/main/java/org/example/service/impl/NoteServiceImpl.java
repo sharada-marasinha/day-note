@@ -26,4 +26,9 @@ public class NoteServiceImpl implements NoteService {
     public List<NoteEntity> getNotes() {
         return repository.findAll();
     }
+
+    @Override
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
 }

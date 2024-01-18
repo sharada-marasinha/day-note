@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface NoteService {
     public void addNote(Note note);
-
     List<NoteEntity> getNotes();
+    void deleteById(Long id);
 }

@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/note")
+@CrossOrigin
 public class NoteController {
     @Autowired
     NoteService service;
@@ -22,5 +23,9 @@ public class NoteController {
     @GetMapping("/get")
     public List<NoteEntity> getNotes(){
         return service.getNotes();
+    }
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable Long id){
+        service.deleteById(id);
     }
 }

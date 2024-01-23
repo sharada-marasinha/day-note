@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 @Data
 @AllArgsConstructor
@@ -21,6 +22,7 @@ public class Note {
     Double income;
     Double outCome;
     Double re_mining;
+
 }
 
 //{

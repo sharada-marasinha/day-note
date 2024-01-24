@@ -5,7 +5,7 @@
 // Your component
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Note } from './Note';
+
 
 @Component({
   selector: 'app-view-all',
@@ -28,20 +28,8 @@ export class ViewAllComponent implements OnInit {
   }
 
   loadNotesInfo() {
-    this.http.get<Note>('http://localhost:8080/note/get').subscribe((data) => {
-      this.noteList = {
-        date: new Date(data.date as string).toString(),
-        i_cet: data.i_cet,
-        home: data.home,
-        work: data.work,
-        task: data.task,
-        body: data.body,
-        project: data.project,
-        spacial: data.spacial,
-        income: data.income,
-        outCome: data.outCome,
-        re_mining: data.re_mining
-      };
+    this.http.get('http://localhost:8080/note/get').subscribe((data) => {
+      this.noteList = data;
 
       console.log(data);
     });
@@ -58,5 +46,13 @@ export class ViewAllComponent implements OnInit {
   setSelectedNote(note: any) {
     this.selectedNote = note;
     console.log(this.selectedNote);
+  }
+
+  updateNote(){
+    this.http.post("http://localhost:8080/note/add",this.selectedNote)
+    .subscribe(data =>{
+      console.log(data);
+      this.selectedNote={};
+    })
   }
 }
